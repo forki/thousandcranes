@@ -1,26 +1,23 @@
 ﻿module ThousandCrains.ConsoleHost
 
-open Akka.Actor
-open Akka.FSharp
-
-type Greet = Greet of string
-
-let f () = 
-    let system = ActorSystem.Create "ThousandCranes"
-
-    // Use F# computation expression with tail-recursive loop
-    // to create an actor message handler and return a reference
-    let greeter = spawn system "greeter" <| fun mailbox ->
-        let rec loop() = actor {
-            let! msg = mailbox.Receive()
-            match msg with
-            | Greet who -> printf "Hello, %s!\n" who
-            return! loop() }
-        loop()
-
-    greeter <! Greet "World"
+open ThousandCranes
+open System.Diagnostics
+open System
 
 [<EntryPoint>]
-let main argv =     
-    f()
-    0 // return an integer exit code
+let main argv =
+    let scriptPath = Seq.tryPick Some argv
+    match scriptPath with
+    | Some scriptPath ->
+        let stopwatch = Stopwatch.StartNew()
+
+        ActorSystem.f()
+        ScriptRunner.evalScript scriptPath
+
+        stopwatch.Stop()
+        printfn "Finished in: %dms" stopwatch.ElapsedMilliseconds
+    | None ->      
+        printfn "Usage: ThousandCranes.exe [scriptPath]"
+
+    Console.ReadLine() |> ignore
+    0

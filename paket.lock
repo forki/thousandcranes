@@ -9,8 +9,11 @@ NUGET
       FSPowerPack.Core.Community (>= 3.0.0.0)
       FSPowerPack.Linq.Community (>= 3.0.0.0)
     FAKE (4.4.1)
+    FSharp.Compiler.Service (1.4.0.5)
     FsPickler (1.3.7)
     FSPowerPack.Core.Community (3.0.0)
     FSPowerPack.Linq.Community (3.0.0)
       FSPowerPack.Core.Community
+    Fuchu (0.6.0)
     Newtonsoft.Json (7.0.1)
+    Unquote (3.0.0)

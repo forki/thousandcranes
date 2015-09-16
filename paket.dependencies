@@ -2,3 +2,7 @@ source http://nuget.org/api/v2
 
 nuget Fake
 nuget Akka.FSharp
+nuget Fuchu
+nuget Unquote
+nuget FSharp.Core 3.1.2.5
+nuget FSharp.Compiler.Service
