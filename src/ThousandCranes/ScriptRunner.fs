@@ -11,10 +11,10 @@ let evalScript scriptPath =
     let outStream = new StringWriter(sbOut)
     let errStream = new StringWriter(sbErr)
 
-    (* first argument is a sacrificial victim to a call to List.tail within F# compiler services
+    (* first argument is a legacy requirement of F# compiler services code
        second stops FSCS from starting a background thread that watches stdin 
     *)
-    let argv = [| "fsi.exe" ; "--noninteractive"|]
+    let argv = [| "sacrifical victim of List.tail" ; "--noninteractive"|]
 
     let fsiConfig = FsiEvaluationSession.GetDefaultConfiguration()
     let fsiSession = FsiEvaluationSession.Create(fsiConfig, argv, inStream, outStream, errStream)  
