@@ -10,14 +10,12 @@ let SetServicePointManagerDefaults () =
 [<EntryPoint>]
 let main argv =
     SetServicePointManagerDefaults ()
-    let system = ActorSystem.create()
 
     let scriptPath = Seq.tryPick Some argv
     match scriptPath with
     | Some scriptPath ->
         let stopwatch = Stopwatch.StartNew()
 
-        ActorSystem.f system
         ScriptRunner.evalScript scriptPath
 
         stopwatch.Stop()

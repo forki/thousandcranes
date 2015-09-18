@@ -1,5 +1,5 @@
 #Thousand Cranes
 
-Small load testing framework based with an F# DSL, based on Akka.NET.
+Small load testing framework with an F# DSL.
 
 Based on the Gatling load testing project, but far fewer features.
