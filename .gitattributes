@@ -1,0 +1,10 @@
+# Auto detect text files
+* text=auto
+
+# Custom for Visual Studio
+*.fs diff=csharp text=auto eol=lf
+*.fsi diff=csharp text=auto eol=lf
+*.fsx diff=csharp text=auto eol=lf
+*.sln text eol=crlf merge=union
+*.fsproj merge=union
+

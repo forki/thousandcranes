@@ -1,8 +1,14 @@
 ﻿module ThousandCranes.ScriptRunner
 
 open Microsoft.FSharp.Compiler.Interactive.Shell
+open System
 open System.IO
 open System.Text
+open System.Diagnostics
+
+type TestResult = {
+    TimeTaken: TimeSpan
+}
 
 let evalScript scriptPath =
     let sbOut = new StringBuilder()
@@ -19,5 +25,9 @@ let evalScript scriptPath =
     let fsiConfig = FsiEvaluationSession.GetDefaultConfiguration()
     let fsiSession = FsiEvaluationSession.Create(fsiConfig, argv, inStream, outStream, errStream)  
 
+    let stopwatch = Stopwatch.StartNew()
     fsiSession.EvalScript(scriptPath)
+    stopwatch.Stop()
+
+    { TimeTaken = stopwatch.Elapsed }
 
