@@ -23,7 +23,7 @@ let evalScript scriptPath =
     let argv = [| "sacrifical victim of List.tail" ; "--noninteractive"|]
 
     let fsiConfig = FsiEvaluationSession.GetDefaultConfiguration()
-    let fsiSession = FsiEvaluationSession.Create(fsiConfig, argv, inStream, outStream, errStream)  
+    let fsiSession = FsiEvaluationSession.Create(fsiConfig, argv, inStream, outStream, errStream)
 
     let stopwatch = Stopwatch.StartNew()
     fsiSession.EvalScript(scriptPath)

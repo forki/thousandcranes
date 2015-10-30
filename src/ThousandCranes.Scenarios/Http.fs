@@ -1,8 +1,11 @@
-﻿module ThousandCranes.HttpRequest
+﻿module ThousandCranes.Http
 
 open HttpFs.Client
 open System
 open System.Text
+
+let setServicePointManagerDefaults () =
+    System.Net.ServicePointManager.DefaultConnectionLimit <- Int32.MaxValue
 
 let deleteMe () =
     let request =

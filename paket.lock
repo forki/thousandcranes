@@ -1,13 +1,22 @@
 NUGET
   remote: http://nuget.org/api/v2
   specs:
-    FAKE (4.7.2)
     FSharp.Compiler.Service (1.4.2.1)
-    FSharp.Core (3.1.2.5)
-    Fuchu (1.0.0)
+    FSharp.Core (4.0.0.1)
+    Http.fs-prerelease (2.4.0)
+      FSharp.Core (>= 3.1.2.1)
+
+GROUP Build
+NUGET
+  remote: http://nuget.org/api/v2
+  specs:
+    FAKE (4.8.0)
+
+GROUP Test
+NUGET
+  remote: http://nuget.org/api/v2
+  specs:
+    FSharp.Core (4.0.0.1)
+    Fuchu (1.0.1.0)
       FSharp.Core (>= 3.1.2.1)
     Unquote (3.1.0)
-  remote: C:\repos\oss\Http.fs\Release\NuGet
-  specs:
-    Http.fs (2.0)
-      FSharp.Core (>= 3.1.2.1)

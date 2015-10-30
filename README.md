@@ -2,8 +2,10 @@
 
 [UNDER CONSTRUCTION]
 
-Small, optionally distributed load testing framework with an F# DSL.
+Load testing framework with an F# DSL.
 
-Can run scripts either on a local machine on in THE CLOUD (Azure).
+Supports running scenarios locally via a lightweight console app or by distributed workers in THE CLOUD (Azure)!
 
-Very loosely based on the Gatling load testing project, but with far fewer features and more DISTRIBUTED AGENTS IN THE CLOUD! things.
+Running workers in Azure and collating their results is easy with the provided Azure supervisor project.
+
+Very loosely based on the [Gatling](http://gatling.io/) load testing project.

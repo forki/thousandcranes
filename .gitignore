@@ -11,8 +11,6 @@ build/
 
 # nuget
 **/packages/*
-# except build/, which is used as an MSBuild target.
-!**/packages/build/
 
 #paket
 .paket/paket.exe
