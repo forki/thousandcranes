@@ -2,6 +2,8 @@ source http://nuget.org/api/v2
 
 nuget FSharp.Compiler.Service
 nuget Http.fs-prerelease
+nuget AutoFixture
+nuget Newtonsoft.Json
 
 group Build
 	source http://nuget.org/api/v2
@@ -11,5 +13,6 @@ group Build
 group Test
 	source http://nuget.org/api/v2
 
+	nuget Suave 1.0.0-beta2
 	nuget Fuchu
 	nuget Unquote

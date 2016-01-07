@@ -8,6 +8,8 @@ open System.Diagnostics
 
 type TestResult = {
     TimeTaken: TimeSpan
+    ScriptOutput : string
+    ScriptErrors : string
 }
 
 let evalScript scriptPath =
@@ -29,5 +31,7 @@ let evalScript scriptPath =
     fsiSession.EvalScript(scriptPath)
     stopwatch.Stop()
 
-    { TimeTaken = stopwatch.Elapsed }
+    { TimeTaken = stopwatch.Elapsed
+      ScriptOutput = sbOut.ToString()
+      ScriptErrors = sbErr.ToString() }
 

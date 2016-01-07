@@ -1,2 +1,4 @@
 FSharp.Compiler.Service
 Http.fs-prerelease
+AutoFixture
+Newtonsoft.Json
