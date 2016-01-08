@@ -9,10 +9,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ThousandCranes.Scenarios.Tests.Integration</RootNamespace>
     <AssemblyName>ThousandCranes.Scenarios.Tests.Integration</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <Name>ThousandCranes.Scenarios.Tests.Integration</Name>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,7 +51,9 @@
     <None Include="App.config" />
     <None Include="paket.references" />
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="SmokeTests.fs" />
     <Compile Include="Program.fs" />
+    <None Include="scripts\smokey.fsx" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
@@ -75,6 +78,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ThousandCranes.Scenarios\ThousandCranes.Scenarios.fsproj">
+      <Name>ThousandCranes.Scenarios</Name>
+      <Project>{77f80fb0-a24b-471a-ab5a-7962d009d47c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Fuchu">
       <HintPath>..\..\packages\test\Fuchu\lib\Fuchu.dll</HintPath>

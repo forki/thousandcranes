@@ -6,21 +6,6 @@ open System.Text
 open Ploeh.AutoFixture
 open Newtonsoft.Json
 
-type Apple = {
-    SomeProperty : string
-}
-
-let fixture = Fixture()
-let playerId = 149128732198127L
-let actionsCount = 2
-let requestsCount = 2
-let requestBodies =
-    fixture.Build<Apple>()
-        .With(fun x -> x.SomeProperty, "fslfj")
-        .CreateMany(requestsCount)
-
-let uriString = "http://localhost:8181/blah"
-
 let go () =
     let requests =
         requestBodies
@@ -34,5 +19,3 @@ let go () =
         |> Async.Parallel
         |> Async.RunSynchronously
         |> Array.iter (printfn "%s")
-    
-

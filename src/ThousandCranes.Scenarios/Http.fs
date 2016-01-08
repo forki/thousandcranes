@@ -39,15 +39,7 @@ let deleteMe () =
               Credentials = ProxyCredentials.Custom { username = "Tim"; password = "Password1" } }
     
     async {
-        use! response = getResponse request // disposed at the end of async, don't
-                                            // fetch outside async body
-        // the above doesn't download the response, so you'll have to do that:
+        use! response = getResponse request
         let! bodyStr = Response.readBodyAsString response
-        // OR:
-        //let! bodyBs = Response.readBodyAsBytes
-
-        // remember HttpFs doesn't buffer the stream (how would we know if we're
-        // downloading 3GiB?), so once you use one of the above methods, you can't do it
-        // again, but have to buffer/stash it yourself somewhere.
         return bodyStr
     }

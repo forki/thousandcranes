@@ -12,7 +12,7 @@ type TestResult = {
     ScriptErrors : string
 }
 
-let evalScript scriptPath =
+let evalScript scriptText =
     let sbOut = new StringBuilder()
     let sbErr = new StringBuilder()
     let inStream = new StringReader("")
@@ -28,7 +28,7 @@ let evalScript scriptPath =
     let fsiSession = FsiEvaluationSession.Create(fsiConfig, argv, inStream, outStream, errStream)
 
     let stopwatch = Stopwatch.StartNew()
-    fsiSession.EvalScript(scriptPath)
+    let foo = fsiSession.EvalInteractionNonThrowing(scriptText)
     stopwatch.Stop()
 
     { TimeTaken = stopwatch.Elapsed
