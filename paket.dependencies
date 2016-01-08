@@ -6,13 +6,13 @@ nuget AutoFixture
 nuget Newtonsoft.Json
 
 group Build
-	source http://nuget.org/api/v2
+    source http://nuget.org/api/v2
 
-	nuget FAKE
+    nuget FAKE
 
 group Test
-	source http://nuget.org/api/v2
+    source http://nuget.org/api/v2
 
-	nuget Suave 1.0.0-beta2
-	nuget Fuchu
-	nuget Unquote
+    nuget Suave 1.0.0
+    nuget Fuchu
+    nuget Unquote
