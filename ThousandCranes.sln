@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D2E8BE92-CF4A-44AC-8DCA-FC2E57CD1DA9}"
 EndProject
@@ -21,11 +21,11 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Sockets", "s
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Scenarios.Tests.Integration", "tests\ThousandCranes.Scenarios.Tests.Integration\ThousandCranes.Scenarios.Tests.Integration.fsproj", "{81D39D7F-B7D9-4339-9385-6098391F246D}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Worker.Azure", "src\ThousandCranes.Worker.Azure\ThousandCranes.Worker.Azure.fsproj", "{3389996F-4B4B-496E-BC21-24A3EFE0D70E}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Worker.AWS", "src\ThousandCranes.Worker.AWS\ThousandCranes.Worker.AWS.fsproj", "{3389996F-4B4B-496E-BC21-24A3EFE0D70E}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Scenarios.Tests.Unit", "tests\ThousandCranes.Scenarios.Tests.Unit\ThousandCranes.Scenarios.Tests.Unit.fsproj", "{50DB75A4-6B2E-4BE0-A674-A3F4EDA64E2E}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Supervisor.Azure", "src\ThousandCranes.Supervisor.Azure\ThousandCranes.Supervisor.Azure.fsproj", "{28FF8648-36A0-4BD2-A9D1-4D1C56777DDC}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ThousandCranes.Supervisor.AWS", "src\ThousandCranes.Supervisor.AWS\ThousandCranes.Supervisor.AWS.fsproj", "{28FF8648-36A0-4BD2-A9D1-4D1C56777DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,14 +5,15 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3389996f-4b4b-496e-bc21-24a3efe0d70e</ProjectGuid>
+    <ProjectGuid>28ff8648-36a0-4bd2-a9d1-4d1c56777ddc</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ThousandCranes.Worker.Azure</RootNamespace>
-    <AssemblyName>ThousandCranes.Worker.Azure</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>ThousandCranes.Supervisor.AWS</RootNamespace>
+    <AssemblyName>ThousandCranes.Supervisor.AWS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
-    <Name>ThousandCranes.Worker.Azure</Name>
+    <Name>ThousandCranes.Supervisor.AWS</Name>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Debug\ThousandCranes.Worker.Azure.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\ThousandCranes.Supervisor.AWS.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -34,7 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DocumentationFile>bin\Release\ThousandCranes.Worker.Azure.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\ThousandCranes.Supervisor.AWS.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
