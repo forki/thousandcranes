@@ -1,26 +1,29 @@
+FRAMEWORK: NET461, NET461, NET461, NET461, NET461, NET461
 NUGET
   remote: http://www.nuget.org/api/v2
   specs:
     AutoFixture (3.38.1)
     FSharp.Compiler.Service (2.0.0.2)
-    FSharp.Core (4.0.0.1)
+    FSharp.Core (4.0.0.1) - framework: net461
     Http.fs-prerelease (2.4.0)
-      FSharp.Core (>= 3.1.2.1)
+      FSharp.Core (>= 3.1.2.1) - framework: net461
     Newtonsoft.Json (8.0.1)
 
 GROUP Build
+FRAMEWORK: NET461, NET461, NET461, NET461, NET461, NET461
 NUGET
   remote: http://www.nuget.org/api/v2
   specs:
     FAKE (4.12.2)
 
 GROUP Test
+FRAMEWORK: NET461, NET461, NET461, NET461, NET461, NET461
 NUGET
   remote: http://www.nuget.org/api/v2
   specs:
-    FSharp.Core (4.0.0.1)
+    FSharp.Core (4.0.0.1) - framework: net461
     Fuchu (1.0.2)
-      FSharp.Core (>= 3.1.2.1)
+      FSharp.Core (>= 3.1.2.1) - framework: net461
     Suave (1.0.0)
-      FSharp.Core (>= 3.1.2.5)
+      FSharp.Core (>= 3.1.2.5) - framework: net461
     Unquote (3.1.0)

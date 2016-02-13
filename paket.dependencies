@@ -1,3 +1,4 @@
+framework: auto-detect
 source http://nuget.org/api/v2
 
 nuget FSharp.Compiler.Service
@@ -6,11 +7,13 @@ nuget AutoFixture
 nuget Newtonsoft.Json
 
 group Build
+    framework: auto-detect
     source http://nuget.org/api/v2
 
     nuget FAKE
 
 group Test
+    framework: auto-detect
     source http://nuget.org/api/v2
 
     nuget Suave 1.0.0

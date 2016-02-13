@@ -1,6 +1,6 @@
 #Thousand Cranes
 
-[UNDER CONSTRUCTION]
+[UNDER CONSTRUCTION VAPOURWARE, PLZ IGNORE THIS REPOSITORY FOR NOW K THX]
 
 Load testing framework with an F# DSL.
 
